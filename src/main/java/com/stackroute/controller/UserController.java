@@ -4,20 +4,20 @@ import com.stackroute.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-
+/**Indicates this is a controller class*/
 @Controller
 public class UserController {
 
+    /**RequestMapping annotation maps HTTP requests to handler methods*/
     @RequestMapping("/")
     public String getUser(ModelMap modelMap) {
 
+        /**Creates object to User*/
         User user = new User();
-        ModelAndView modelAndView = new ModelAndView();
+        /**Set name of user*/
         user.setName("indu");
+        /**UserController will pass user object to view*/
         modelMap.addAttribute("username", user.getName());
         return "display";
     }
