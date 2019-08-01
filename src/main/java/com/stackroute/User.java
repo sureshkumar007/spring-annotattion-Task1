@@ -1,5 +1,10 @@
 package com.stackroute;
 
+
+
+/*
+getting username
+ */
 public class User {
     private String name;
 
