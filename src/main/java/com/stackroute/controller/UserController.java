@@ -16,7 +16,7 @@ public class UserController {
         /**Creates object to User*/
         User user = new User();
         /**Set name of user*/
-        user.setName("indu");
+        user.setName("suresh");
         /**UserController will pass user object to view*/
         modelMap.addAttribute("username", user.getName());
         return "display";
